@@ -1,0 +1,10 @@
+Router: {{inventory_hostname}}
+
+{% for key,fact in hostvars[inventory_hostname]|dictsort %}
+{% if 'cmd' in key %}
+Command: {{key}}
+{{fact.stdout.0}}
+****************************************************************************************************************
+
+{% endif %}
+{% endfor %}

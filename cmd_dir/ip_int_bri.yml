@@ -1,0 +1,6 @@
+---
+- name: Capture output of show ip int brief
+  ios_command:
+     commands:
+        - show ip int brief
+  register: cmd_ipint

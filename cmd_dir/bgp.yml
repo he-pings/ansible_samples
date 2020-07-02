@@ -1,0 +1,7 @@
+---
+- name: Capture output of show ip bgp summary
+  ios_command:
+     commands:
+        - show ip bgp summary
+  register: cmd_bgp
+

@@ -1,0 +1,17 @@
+---
+- name: Capture Output of commands and save to per device output file
+  connection: network_cli
+  gather_facts: false
+  hosts: routers
+
+
+  tasks:
+          - name: Capture output of show ip int brief
+            include: "{{item}}"
+            with_fileglob: ["cmd_dir/*.yml"]
+
+          - name: Generate per device Report
+            template:
+                   src: "./report2.j2"
+                   dest: "./output2/{{inventory_hostname}}.out"
+

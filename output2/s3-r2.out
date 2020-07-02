@@ -1,0 +1,27 @@
+Router: s3-r2
+
+Command: cmd_bgp
+BGP router identifier 10.253.0.6, local AS number 65003
+BGP table version is 10, main routing table version 10
+5 network entries using 700 bytes of memory
+8 path entries using 640 bytes of memory
+4/4 BGP path/bestpath attribute entries using 576 bytes of memory
+2 BGP AS-PATH entries using 48 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 1964 total bytes of memory
+BGP activity 5/0 prefixes, 10/2 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.3.0.9        4        65001     933     930       10    0    0 13:58:59        3
+10.3.0.13       4        65001     931     931       10    0    0 13:59:05        3
+****************************************************************************************************************
+
+Command: cmd_ipint
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.3.0.249      YES manual up                    up      
+Ethernet0/1                10.3.0.10       YES manual up                    up      
+Ethernet0/2                10.3.0.14       YES manual up                    up      
+Ethernet0/3                10.253.0.6      YES manual up                    up
+****************************************************************************************************************
+

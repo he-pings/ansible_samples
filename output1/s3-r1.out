@@ -1,0 +1,30 @@
+Router: s3-r1
+
+Command:show ip interface brief
+
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.3.0.253      YES manual up                    up      
+Ethernet0/1                10.3.0.2        YES manual up                    up      
+Ethernet0/2                10.3.0.6        YES manual up                    up      
+Ethernet0/3                10.253.0.5      YES manual up                    up 
+******************************************************************************************
+
+Command: show ip bgp summary
+
+BGP router identifier 10.253.0.5, local AS number 65003
+BGP table version is 8, main routing table version 8
+5 network entries using 700 bytes of memory
+8 path entries using 640 bytes of memory
+4/4 BGP path/bestpath attribute entries using 576 bytes of memory
+2 BGP AS-PATH entries using 48 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 1964 total bytes of memory
+BGP activity 5/0 prefixes, 9/1 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.3.0.1        4        65001     932     932        8    0    0 13:57:00        3
+10.3.0.5        4        65001     929     926        8    0    0 13:56:57        3 
+******************************************************************************************
+
+

@@ -1,0 +1,25 @@
+---
+- name: Capture Output of commands and save to per device output file
+  connection: network_cli
+  gather_facts: false
+  hosts: routers
+
+
+  tasks:
+          - name: Capture output of show ip int brief
+            ios_command:
+                    commands:
+                            - show ip int brief
+            register: cmd1_output
+
+          - name: Capture output of show ip bgp summary
+            ios_command:
+                    commands:
+                            - show ip bgp summary
+            register: cmd2_output
+
+          - name: Generate per device Report
+            template:
+                    src: "./report1.j2"
+                    dest: "./output1/{{inventory_hostname}}.out"
+

@@ -1,0 +1,41 @@
+Router: s1-r1
+
+Command:show ip interface brief
+
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.1.1.1        YES manual up                    up      
+Ethernet0/1                10.2.0.1        YES manual up                    up      
+Ethernet0/2                10.2.0.9        YES manual up                    up      
+Ethernet0/3                10.3.0.1        YES manual up                    up      
+Ethernet1/0                10.3.0.9        YES manual up                    up      
+Ethernet1/1                10.253.0.1      YES NVRAM  up                    up      
+Ethernet1/2                unassigned      YES NVRAM  administratively down down    
+Ethernet1/3                unassigned      YES NVRAM  administratively down down    
+Ethernet2/0                unassigned      YES NVRAM  administratively down down    
+Ethernet2/1                unassigned      YES NVRAM  administratively down down    
+Ethernet2/2                unassigned      YES NVRAM  administratively down down    
+Ethernet2/3                unassigned      YES NVRAM  administratively down down 
+******************************************************************************************
+
+Command: show ip bgp summary
+
+BGP router identifier 10.253.0.1, local AS number 65001
+BGP table version is 6, main routing table version 6
+5 network entries using 700 bytes of memory
+14 path entries using 1120 bytes of memory
+8/3 BGP path/bestpath attribute entries using 1152 bytes of memory
+2 BGP AS-PATH entries using 48 bytes of memory
+0 BGP route-map cache entries using 0 bytes of memory
+0 BGP filter-list cache entries using 0 bytes of memory
+BGP using 3020 total bytes of memory
+BGP activity 5/0 prefixes, 19/5 paths, scan interval 60 secs
+
+Neighbor        V           AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+10.1.1.2        4        65001     932     930        6    0    0 14:00:11        5
+10.2.0.2        4        65002     929     928        6    0    0 13:56:57        2
+10.2.0.10       4        65002     928     927        6    0    0 13:57:02        2
+10.3.0.2        4        65003     932     932        6    0    0 13:57:00        2
+10.3.0.10       4        65003     928     930        6    0    0 13:56:54        2 
+******************************************************************************************
+
+
